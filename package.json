@@ -1,7 +1,7 @@
 {
-  "name": "ember-appbase",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "name": "torii-user-service",
+  "version": "0.1.0",
+  "description": "WIP: do some of the basic setup for torii. currently for own provider but may be extended in future",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -18,6 +18,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "active-model-adapter": "2.0.3",
     "broccoli-asset-rev": "^2.2.0",
     "ember-cli": "1.13.12",
     "ember-cli-app-version": "^1.0.0",
@@ -31,11 +32,12 @@
     "ember-cli-release": "0.2.8",
     "ember-cli-sri": "^1.1.0",
     "ember-cli-uglify": "^1.2.0",
-    "ember-data": "1.13.15",
+    "ember-data": "2.2.0",
+    "ember-disable-prototype-extensions": "^1.0.0",
     "ember-disable-proxy-controllers": "^1.0.1",
     "ember-export-application-global": "^1.0.4",
-    "ember-disable-prototype-extensions": "^1.0.0",
-    "ember-try": "~0.0.8"
+    "ember-try": "~0.0.8",
+    "torii": "^0.6.1"
   },
   "keywords": [
     "ember-addon"

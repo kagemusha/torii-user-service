@@ -1,12 +1,11 @@
-# Ember-appbase
+# Torii-user-service
 
-This README outlines the details of collaborating on this Ember addon.
+WIP: Implemtation of own-managed auth using Torii.  
+
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+WIP ember install torii-user-service
 
 ## Running
 
@@ -23,4 +22,8 @@ This README outlines the details of collaborating on this Ember addon.
 
 * `ember build`
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+## Setup
+
+1. configuration
+- urls
+- features

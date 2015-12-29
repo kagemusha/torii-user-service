@@ -1,0 +1,7 @@
+{{#unless userService.isLoggedIn}}
+  <h3>Register</h3>
+  <p>Email: {{input value=email autofocus=true}}</p>
+  <p>Password: {{input type='password' value=password}}</p>
+  <p>Confirm Password: {{input type='password' value=passwordConfirmation}}</p>
+  <button {{action 'register'}}>Register</button>
+{{/unless}}

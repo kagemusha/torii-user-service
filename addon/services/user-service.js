@@ -1,11 +1,27 @@
 import Ember from 'ember';
 const MUST_CUSTOMIZE_MSG = 'must-customize (see torii-user-service/services/user-service';
 
+const { computed } = Ember;
+
 export default Ember.Service.extend({
+  authServer: MUST_CUSTOMIZE_MSG,
   authenticationUrl: MUST_CUSTOMIZE_MSG,
-  loginUrl: MUST_CUSTOMIZE_MSG,
-  logoutUrl: MUST_CUSTOMIZE_MSG,
-  registrationUrl: MUST_CUSTOMIZE_MSG,
+  loginPath: MUST_CUSTOMIZE_MSG,
+  logoutPath: MUST_CUSTOMIZE_MSG,
+  registrationPath: MUST_CUSTOMIZE_MSG,
+
+  loginUrl: computed('authServer', 'loginPath', function(){
+    return this.getAbsolutePath(this.get('loginPath'));
+  }),
+  logoutUrl: computed('authServer', 'logoutPath', function(){
+    return this.getAbsolutePath(this.get('logoutPath'));
+  }),
+  registrationUrl: computed('authServer', 'registrationPath', function(){
+    return this.getAbsolutePath(this.get('registrationPath'));
+  }),
+  getAbsolutePath(relativePath) {
+    return `${this.get('authServer')}/${relativePath}`;
+  },
 
   currentUser: null,
   isLoggedIn: Ember.computed.notEmpty('currentUser'),
@@ -36,5 +52,5 @@ export default Ember.Service.extend({
         passwordConfirmation,
       }
     });
-  }
+  },
 });

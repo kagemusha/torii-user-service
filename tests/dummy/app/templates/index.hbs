@@ -1,6 +1,13 @@
-<p>Server: {{input class='server' value=server autofocus=true}}</p>
+<p>Server: {{input class='server' value=userService.authServer autofocus=true}}</p>
+<p>Login Path: {{input class='server' value=userService.loginPath autofocus=true}}</p>
+<p>Registration Path: {{input class='server' value=userService.registrationPath autofocus=true}}</p>
+
 {{login-component
   login=(action "login")
 }}
+<strong>Login Url: {{userService.loginUrl}}</strong>
+
+
 {{registration-component}}
+<strong>Registration Url: {{userService.registrationUrl}}</strong>
 

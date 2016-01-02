@@ -33,6 +33,8 @@ export default Ember.Service.extend({
         email,
         password,
       }
+    }).catch((error)=> {
+      Ember.Logger.log(`Error logging in:`, error);
     });
   },
   logout() {
